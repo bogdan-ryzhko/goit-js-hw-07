@@ -15,6 +15,8 @@ const getMurkupImages = arr => {
 
 galleryRef.insertAdjacentHTML('beforeend', getMurkupImages(galleryItems));
 
+let lightbox = new SimpleLightbox('.gallery .gallery__item');
+
 const imageHandler = (event) => {
 	event.preventDefault();
 	const targetIMG = event.target;
@@ -23,7 +25,7 @@ const imageHandler = (event) => {
 		return;
 	}
 
-	new SimpleLightbox('.gallery a');
+	lightbox;
 }
 
 galleryRef.addEventListener('click', imageHandler);
