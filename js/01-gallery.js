@@ -36,7 +36,7 @@ const imageHandler = (event) => {
 
 	const lightbox = document.querySelector('.basicLightbox');
 
-	if (Boolean(lightbox)) {
+	if (lightbox) {
 		window.addEventListener('keydown', (event) => {
 			if (event.code !== 'Escape') {
 				return;
